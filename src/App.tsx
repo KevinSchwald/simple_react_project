@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {MyButton} from "./MyButton";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export interface IAppProps {}
+export interface IAppState {
+    showDetails: boolean
 }
 
-export default App;
+class App extends React.Component<IAppProps, IAppState> {
+    constructor(props: IAppProps) {
+        super(props);
+        this.handleCLick =
+            this.handleCLick.bind(this)
+        this.state = {
+            showDetails: false
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <p>showDetails =
+                    {this.state.showDetails ? "true" : "false"}
+                </p>
+                <MyButton
+                    buttonName={"Click here"}
+                    handleButtonClick={this.handleCLick}></MyButton>
+            </div>
+        )
+    }
+
+    handleCLick() {
+        console.log(`App.handleClick() called`)
+        this.setState({
+            showDetails: !this.state.showDetails
+        })
+    }
+}
+
+export default App
