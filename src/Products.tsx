@@ -1,3 +1,10 @@
+import denji from "./Denji.png"
+import mauzi from "./Mauzi.png"
+import nezuko from "./Nezuko.png"
+import panda from "./Panda.png"
+import pochita from "./Pochita.png"
+import power from "./Power.png"
+
 export interface IProduct {
     id: number
     name: string
@@ -21,7 +28,7 @@ export class Collection {
             id: 1,
             name: "Holy Panda",
             type: "Tactile",
-            image: "images/holy-panda.webp",
+            image: "panda",
             longDescription: "...",
             specs: {
                 actuationForce: "44",
@@ -35,7 +42,7 @@ export class Collection {
             id: 2,
             name: "Power",
             type: "Tactile",
-            image: "images/Power_anime_design_2.webp",
+            image: "power",
             longDescription: "...",
             specs: {
                 actuationForce: "55",
@@ -49,7 +56,7 @@ export class Collection {
             id: 3,
             name: "Denji",
             type: "Not tactile",
-            image: "images/12-Facts-About-Denji-in-Chainsaw-Man-You-Should-Know.png.webp",
+            image: "denji",
             longDescription: "...",
             specs: {
                 actuationForce: "69",
@@ -63,7 +70,7 @@ export class Collection {
             id: 4,
             name: "Pochita",
             type: "Tactile",
-            image: "images/1284685.jpg",
+            image: "pochita",
             longDescription: "...",
             specs: {
                 actuationForce: "12",
@@ -77,7 +84,7 @@ export class Collection {
             id: 5,
             name: "Mauzi",
             type: "Not tactile",
-            image: "images/200px-Gigadynamax-Mauzi_Artwork.png",
+            image: "mauzi",
             longDescription: "...",
             specs: {
                 actuationForce: "4",
@@ -90,7 +97,7 @@ export class Collection {
             id: 6,
             name: "Nezuko",
             type: "Tactile",
-            image: "images/02937b2553cbd8d6975618a564fc97dcf34d57e5b164a13c3d597cbd3bdcce2d_thumb.webp",
+            image: "nezuko",
             longDescription: "...",
             specs: {
                 actuationForce: "14",
@@ -101,5 +108,5 @@ export class Collection {
             }
         },
     ]
-    handleItemClicked(id:number) {}
+    handleItemClicked(id: number) {}
 }
